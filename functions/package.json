@@ -1,0 +1,11 @@
+{
+  "name": "agrimitra-functions",
+  "description": "Backend functions for AgriMitra (real AI assistant proxy)",
+  "main": "index.js",
+  "engines": { "node": "20" },
+  "dependencies": {
+    "firebase-functions": "^5.0.0",
+    "firebase-admin": "^12.0.0"
+  },
+  "private": true
+}

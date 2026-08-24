@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /assistant
+Disallow: /disease
+Disallow: /weather
+Disallow: /shops
+Disallow: /settings
+Disallow: /reports
+Sitemap: https://agriraksha.netlify.app/sitemap.xml
