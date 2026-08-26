@@ -44,6 +44,7 @@ export async function identifyCropDisease(imageDataUrl, lang = "en") {
       : "No specific treatment listed for this result — see prevention below, or consult a local agriculture officer.",
     medicines: chemical.length ? chemical.join(", ") : "Not specified for this result",
     prevention: prevention.length ? prevention.join("; ") : "Not provided by the identification service for this result.",
+    status:data?.prediction?.status || "ok",
     isRealResult: true,
   };
 }
