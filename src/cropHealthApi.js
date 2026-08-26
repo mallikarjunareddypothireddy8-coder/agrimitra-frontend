@@ -37,8 +37,8 @@ export async function identifyCropDisease(imageDataUrl, lang = "en") {
     confidence: Math.round((diseaseSuggestion.probability || 0) * 100),
     // kindwise's crop.health doesn't return a separate "symptoms" field —
     // their compiled `description` is the closest equivalent.
-    symptoms: details.description || "Not provided by the identification service for this result.",
-    causes: details.description || "Not provided by the identification service for this result.",
+    symptoms: details.description || " Symptoms are not available for this result.",
+    causes: details.cause || " Cause information is not available for this result.",
     treatment: chemical.length || biological.length
       ? [...chemical, ...biological].join("; ")
       : "No specific treatment listed for this result — see prevention below, or consult a local agriculture officer.",
