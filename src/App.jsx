@@ -1225,6 +1225,11 @@ function DiseaseDetection({ t, lang, addHistory }) {
                 <div>
                   <p className="text-xs font-bold text-[#E8A33D] uppercase tracking-wide mb-1">{result.crop}</p>
                   <h3 className="text-xl font-bold text-[#1F3D2B] dark:text-white">{result.name}</h3>
+                  {result.status === "low_confidence" && (
+                    <p className="text-[11px] text-[#B06A1E] mt-1">
+                         Low confidence — this percentage is the model score, not a confirmed diagnosis.
+                        </p>
+                      )}
                 </div>
                 <div className="text-right">
                   <p className="text-2xl font-bold text-[#4C7A3D]">{result.confidence}%</p>
